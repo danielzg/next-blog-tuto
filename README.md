@@ -6,3 +6,5 @@ browser do cliente, sem ter que fazer uma requisição para o servidor web. Send
 desenvolvido com o Next a ancora <a> deverá ser utilizada.
 
 Arquivos de imagem que estiverem na pasta 'public' poderão ser utilizadas apenas referenciando-as por '/nomeimagem'
+
+Os arquivos de CSS deverão ser nomeados como .module.css para que o FrameWork consiga utilliza-lo
