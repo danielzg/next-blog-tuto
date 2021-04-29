@@ -24,6 +24,33 @@ This is possible because getStaticProps only runs on the server-side. It will ne
 GetServerSideProps:
 "You should use getServerSideProps only if you need to pre-render a page whose data must be fetched at request time. Time to first byte (TTFB) will be slower than getStaticProps because the server must compute the result on every request" 
 
-Dar uma olhada em:
-SWR
+SWR -> https://swr.vercel.app
 React Hooks library for data fetching
+Utilizando o Axios no SWR:
+"
+import axios from 'axios'
+
+const fetcher = url => axios.get(url).then(res => res.data)
+----------------
+import useSWR from 'swr'
+
+function useUser (id) {
+  const { data, error } = useSWR(`/api/user/${id}`, fetcher)
+
+  return {
+    user: data,
+    isLoading: !error && !data,
+    isError: error
+  }
+}
+-------------------
+And use it in your components:
+
+function Avatar ({ id }) {
+  const { user, isLoading, isError } = useUser(id)
+
+  if (isLoading) return <Spinner />
+  if (isError) return <Error />
+  return <img src={user.avatar} />
+}
+"
