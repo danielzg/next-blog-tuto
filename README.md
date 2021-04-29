@@ -7,4 +7,19 @@ desenvolvido com o Next a ancora <a> deverá ser utilizada.
 
 Arquivos de imagem que estiverem na pasta 'public' poderão ser utilizadas apenas referenciando-as por '/nomeimagem'
 
-Os arquivos de CSS deverão ser nomeados como .module.css para que o FrameWork consiga utilliza-lo
+Os arquivos de CSS deverão ser nomeados como .module.css para que o FrameWork consiga utilliza-los pois ao carregá-los o NEXT os renomeia automaticamente.
+
+getStaticProps
+A função getStaticProps é processada apenas no lado do servidor, nao aparecendo no lado do cliente. E será executada na build do projeto.
+Isso faz muita diferença. Como a documentação 
+do Next explica:
+
+"Development vs. Production
+In development (npm run dev or yarn dev), getStaticProps runs on every request.
+In production, getStaticProps runs at build time.
+
+This is possible because getStaticProps only runs on the server-side. It will never run on the client-side. It won’t even be included in the JS bundle for the browser. That means you can write code such as direct database queries without them being sent to browsers." 
+(link: https://nextjs.org/learn/basics/data-fetching/getstaticprops-details, data: 29-04-2021)
+
+GetServerSideProps:
+"You should use getServerSideProps only if you need to pre-render a page whose data must be fetched at request time. Time to first byte (TTFB) will be slower than getStaticProps because the server must compute the result on every request" 
