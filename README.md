@@ -23,3 +23,7 @@ This is possible because getStaticProps only runs on the server-side. It will ne
 
 GetServerSideProps:
 "You should use getServerSideProps only if you need to pre-render a page whose data must be fetched at request time. Time to first byte (TTFB) will be slower than getStaticProps because the server must compute the result on every request" 
+
+Dar uma olhada em:
+SWR
+React Hooks library for data fetching
