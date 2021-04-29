@@ -28,10 +28,12 @@ SWR -> https://swr.vercel.app
 React Hooks library for data fetching
 Utilizando o Axios no SWR:
 "
+1)
 import axios from 'axios'
 
 const fetcher = url => axios.get(url).then(res => res.data)
-----------------
+
+2)
 import useSWR from 'swr'
 
 function useUser (id) {
@@ -46,6 +48,7 @@ function useUser (id) {
 -------------------
 And use it in your components:
 
+3)
 function Avatar ({ id }) {
   const { user, isLoading, isError } = useUser(id)
 
