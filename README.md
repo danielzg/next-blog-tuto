@@ -45,7 +45,7 @@ function useUser (id) {
     isError: error
   }
 }
--------------------
+
 And use it in your components:
 
 3)
@@ -58,8 +58,7 @@ function Avatar ({ id }) {
 }
 "
 <br>
-Obervações Fallback
-----------------
+<b>Obervações Fallback</b>
 Fallback
 Recall that we returned fallback: false from getStaticPaths. What does this mean?
 
