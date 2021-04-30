@@ -57,6 +57,7 @@ function Avatar ({ id }) {
   return <img src={user.avatar} />
 }
 "
+<br>
 Obervações Fallback
 ----------------
 Fallback
